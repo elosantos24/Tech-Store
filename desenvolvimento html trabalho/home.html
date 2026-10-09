@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechStore - Eletrônicos</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="logo">
+            Tech<span>Store</span>
+        </div>
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="O que você está procurando?"
+            >
+
+            <button id="searchButton">
+                🔍
+            </button>
+        </div>
+
+        <div class="header-actions">
+
+            <a href="#">
+                👤 Minha conta
+            </a>
+
+            <a href="carrinho.html" class="cart">
+                🛒 Carrinho
+                <span id="cartCount">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MENU -->
+    <nav class="menu">
+
+        <a href="#">Sobre nós</a>
+        <a href="#">Celulares</a>
+        <a href="#">Computadores</a>
+        <a href="#">Acessórios</a>
+        <a href="#">Games</a>
+        <a href="promocoes.html">Promoções</a>
+
+    </nav>
+
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="banner">
+
+        <div class="banner-content">
+
+            <p class="banner-small">
+                TECNOLOGIA PARA VOCÊ
+            </p>
+
+            <h1>
+                Tecnologia que<br>
+                combina com você.
+            </h1>
+
+            <p>
+                Encontre smartphones, notebooks,
+                acessórios e muito mais.
+            </p>
+
+            <button class="banner-button">
+                Ver ofertas
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+    <section class="section">
+
+        <h2>Categorias</h2>
+
+        <div class="categories">
+
+            <div class="category">
+                📱
+                <h3>Celulares</h3>
+            </div>
+
+            <div class="category">
+                💻
+                <h3>Notebooks</h3>
+            </div>
+
+            <div class="category">
+                🎧
+                <h3>Áudio</h3>
+            </div>
+
+            <div class="category">
+                🎮
+                <h3>Games</h3>
+            </div>
+
+            <div class="category">
+                ⌨️
+                <h3>Acessórios</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUTOS -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Produtos em destaque</h2>
+
+            <a href="#">
+                Ver todos →
+            </a>
+
+        </div>
+
+
+        <div class="products">
+
+            <!-- PRODUTO 1 -->
+            <div class="product">
+
+                <div class="product-image">
+                    📱
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category-name">
+                        Smartphone
+                    </p>
+
+                    <h3>
+                        Smartphone Pro X
+                    </h3>
+
+                    <p class="description">
+                        256GB • 8GB RAM
+                    </p>
+
+                    <p class="price">
+                        R$ 2.499,90
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        data-product="Smartphone Pro X"
+                    >
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+            <div class="product">
+
+                <div class="product-image">
+                    💻
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category-name">
+                        Notebook
+                    </p>
+
+                    <h3>
+                        Notebook Ultra
+                    </h3>
+
+                    <p class="description">
+                        16GB RAM • SSD 512GB
+                    </p>
+
+                    <p class="price">
+                        R$ 3.799,90
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        data-product="Notebook Ultra"
+                    >
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+            <div class="product">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category-name">
+                        Áudio
+                    </p>
+
+                    <h3>
+                        Headphone Wireless
+                    </h3>
+
+                    <p class="description">
+                        Bluetooth • Cancelamento de ruído
+                    </p>
+
+                    <p class="price">
+                        R$ 399,90
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        data-product="Headphone Wireless"
+                    >
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 4 -->
+            <div class="product">
+
+                <div class="product-image">
+                    🎮
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category-name">
+                        Games
+                    </p>
+
+                    <h3>
+                        Controle Wireless
+                    </h3>
+
+                    <p class="description">
+                        Compatível com PC e console
+                    </p>
+
+                    <p class="price">
+                        R$ 299,90
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        data-product="Controle Wireless"
+                    >
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>TechStore</h3>
+
+                <p>
+                    Tecnologia para facilitar
+                    o seu dia a dia.
+                </p>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+
+                <p>
+                    Segunda a sexta<br>
+                    08:00 às 18:00
+                </p>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+
+                <p>
+                    contato@techstore.com
+                </p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 TechStore. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

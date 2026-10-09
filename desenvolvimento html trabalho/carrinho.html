@@ -1,0 +1,204 @@
+<body>
+    <a href="home.html" class="voltar">
+        ← Voltar
+    </a>
+    <header>
+        <h1>Tech Store</h1>
+        <p>Meu Carrinho</p>
+    </header>
+
+    <div class="menu">
+        <a href="home.html">Início</a>
+        
+    </div>
+    <link rel="stylesheet" href="carrinho.css">
+    <div class="container">
+
+        <h2>🛒 Produtos no Carrinho</h2>
+
+        <div class="carrinho">
+
+            <!-- Produto 1 -->
+            <div class="produto">
+
+                <div class="imagem">
+                    💻
+                </div>
+
+                <div class="informacoes">
+                    <h3>Notebook</h3>
+                    <p>Notebook para estudos e trabalho</p>
+                    <p class="preco">R$ 3.500,00</p>
+
+                    <div class="quantidade">
+                        Quantidade:
+                        <button onclick="diminuir(0)">-</button>
+                        <span id="qtd0">1</span>
+                        <button onclick="aumentar(0)">+</button>
+                    </div>
+
+                    <button class="remover" onclick="remover(0)">
+                        Remover
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Produto 2 -->
+            <div class="produto">
+
+                <div class="imagem">
+                    🎧
+                </div>
+
+                <div class="informacoes">
+                    <h3>Headset</h3>
+                    <p>Headset gamer com microfone</p>
+                    <p class="preco">R$ 250,00</p>
+
+                    <div class="quantidade">
+                        Quantidade:
+                        <button onclick="diminuir(1)">-</button>
+                        <span id="qtd1">1</span>
+                        <button onclick="aumentar(1)">+</button>
+                    </div>
+
+                    <button class="remover" onclick="remover(1)">
+                        Remover
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Produto 3 -->
+            <div class="produto">
+
+                <div class="imagem">
+                    ⌨️
+                </div>
+
+                <div class="informacoes">
+                    <h3>Teclado</h3>
+                    <p>Teclado mecânico RGB</p>
+                    <p class="preco">R$ 200,00</p>
+
+                    <div class="quantidade">
+                        Quantidade:
+                        <button onclick="diminuir(2)">-</button>
+                        <span id="qtd2">1</span>
+                        <button onclick="aumentar(2)">+</button>
+                    </div>
+
+                    <button class="remover" onclick="remover(2)">
+                        Remover
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Resumo -->
+        <div class="resumo">
+
+            <h2>Resumo da compra</h2>
+
+            <p>Subtotal: <span id="subtotal">R$ 3.950,00</span></p>
+
+            <p>Frete: R$ 30,00</p>
+
+            <p class="total">
+                Total: <span id="total">R$ 3.980,00</span>
+            </p>
+
+            <button class="finalizar" onclick="finalizarCompra()">
+                Finalizar compra
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Preços dos produtos
+        var precos = [3500, 250, 200];
+
+        // Quantidades
+        var quantidades = [1, 1, 1];
+
+
+        function aumentar(produto) {
+
+            quantidades[produto]++;
+
+            atualizar(produto);
+        }
+
+
+        function diminuir(produto) {
+
+            if (quantidades[produto] > 1) {
+                quantidades[produto]--;
+            }
+
+            atualizar(produto);
+        }
+
+
+        function atualizar(produto) {
+
+            document.getElementById("qtd" + produto).innerHTML =
+                quantidades[produto];
+
+            calcularTotal();
+        }
+
+
+        function calcularTotal() {
+
+            var subtotal = 0;
+
+            for (var i = 0; i < precos.length; i++) {
+
+                subtotal =
+                    subtotal + (precos[i] * quantidades[i]);
+
+            }
+
+            var frete = 30;
+
+            var total = subtotal + frete;
+
+            document.getElementById("subtotal").innerHTML =
+                "R$ " + subtotal.toFixed(2).replace(".", ",");
+
+            document.getElementById("total").innerHTML =
+                "R$ " + total.toFixed(2).replace(".", ",");
+        }
+
+
+        function remover(produto) {
+
+            alert("Produto removido do carrinho!");
+
+            quantidades[produto] = 0;
+
+            calcularTotal();
+        }
+
+
+        function finalizarCompra() {
+
+            alert("Compra finalizada com sucesso!");
+
+        }
+
+    </script>
+
+</body>
+</html>
