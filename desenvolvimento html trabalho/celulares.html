@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Celulares | TechStore</title>
+
+    <link rel="stylesheet" href="celulares.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            Tech<span>Store</span>
+        </a>
+
+        <form class="barra-busca" id="formBusca">
+            <input
+                type="search"
+                id="busca"
+                placeholder="O que você está procurando?"
+                aria-label="Buscar celulares"
+            >
+            <button type="submit" aria-label="Buscar">🔍</button>
+        </form>
+
+        <div class="acoes">
+            <a href="#">♟ Minha conta</a>
+            <a href="#">🛒 Carrinho <span id="contador">0</span></a>
+        </div>
+
+    </header>
+
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#">Sobre nós</a>
+        <a href="celulares.html" class="ativo">Celulares</a>
+        <a href="#">Computadores</a>
+        <a href="#">Acessórios</a>
+        <a href="#">Games</a>
+        <a href="#">Promoções</a>
+    </nav>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="banner">
+            <div class="banner-conteudo">
+                <span class="etiqueta-banner">TECHSTORE</span>
+
+                <h1>Encontre o celular ideal para você.</h1>
+
+                <p>
+                    Explore nossas marcas, descubra novidades e
+                    encontre a tecnologia perfeita para o seu dia a dia.
+                </p>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section class="catalogo">
+
+            <div class="titulo-pagina">
+                <div>
+                    <span class="texto-destaque">NOSSA LOJA</span>
+                    <h2>Celulares</h2>
+                    <p>Confira os smartphones disponíveis.</p>
+                </div>
+
+                <select id="ordenacao" aria-label="Ordenar celulares">
+                    <option value="padrao">Mais relevantes</option>
+                    <option value="menor">Menor preço</option>
+                    <option value="maior">Maior preço</option>
+                    <option value="nome">Nome: A–Z</option>
+                </select>
+            </div>
+
+            <!-- ABAS DE MARCAS -->
+            <div class="filtro-marcas">
+                <h3>Explore por marca</h3>
+
+                <div class="abas" role="group" aria-label="Filtrar por marca">
+
+                    <button class="aba ativa" data-marca="todas">
+                        Todas
+                    </button>
+
+                    <button class="aba" data-marca="motorola">
+                        Motorola
+                    </button>
+
+                    <button class="aba" data-marca="apple">
+                        Apple
+                    </button>
+
+                    <button class="aba" data-marca="xiaomi">
+                        Xiaomi
+                    </button>
+
+                    <button class="aba" data-marca="samsung">
+                        Samsung
+                    </button>
+
+                    <button class="aba" data-marca="huawei">
+                        Huawei
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- RESULTADOS -->
+            <div class="resultado">
+                <p id="quantidade">Todos os celulares</p>
+            </div>
+
+            <!-- LISTA DE PRODUTOS -->
+            <div class="grade-produtos" id="gradeProdutos">
+
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                        <span class="selo">Destaque</span>
+                        <div class="celular-visual motorola">M</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto g06 128GB 4GB Ram Azul Marinho 6,9" Câm. 50MP + Selfie 8MP</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$ 776,67</p>
+                        <p class="parcelas">ou 10x de R$ 77,667</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <span class="selo">Destaque</span>
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>Apple iPhone 15 128GB Rosa 6,1" 48MP iOS 5G</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$  4.443,00</p>
+                        <p class="parcelas">ou 10x de R$ 444,30</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                
+            <!-- HUAWEI -->
+                <article class="produto"
+                    data-marca="huawei"
+                    data-nome="Huawei Nova"
+                    data-preco="1899">
+
+                    <div class="imagem-produto">
+                        <span class="selo">Destaque</span>
+                        <div class="celular-visual huawei">H</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Huawei</span>
+                        <h3>Smartphone HUAWEI Nova 15 Max 8GB+256GB Super Bateria de 8.500 mAh</h3>
+                        <p class="descricao">Visual moderno e recursos inteligentes.</p>
+                        <p class="preco">R$ 1.776,00</p>
+                        <p class="parcelas">ou 10x de R$ 177,60</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                     <img
+                      src="C:\Users\ELOYSARAQUELDOSSANTO\Downloads\desenvolvimento html trabalho\imgs\Smartphone Motorola Moto G67 5G 256GB 12GB.webp"
+                     alt="Samsung Galaxy S24"
+                     class="foto-celular"
+    >
+                     </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto G67 5G 256GB 12GB (4GB RAM + 8GB RAM Boost) Câmera 50MP Sony Lytia 600 Tela 1.5K Extreme Amoled 120Hz Ultrarresistente</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$  1.306,80</p>
+                        <p class="parcelas">ou 10x de R$ 130,68</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual motorola">M</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola G86 256GB Grafite 5G 8GB+8GB RAM Boost Inteligente 6,7" Câm. Dupla + Selfie 32MP</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$ 1.899,00</p>
+                        <p class="parcelas">ou 10x de R$ 189,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+            
+
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>iPhone 11 64GB Preto</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$ 1.059,00</p>
+                        <p class="parcelas">ou 10x de R$ 132,38</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+
+                <!-- XIAOMI -->
+                <article class="produto"
+                    data-marca="xiaomi"
+                    data-nome="Xiaomi Redmi Note"
+                    data-preco="1699">
+
+                    <div class="imagem-produto">
+                        <span class="selo oferta">Oferta</span>
+                        <div class="celular-visual xiaomi">mi</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Xiaomi</span>
+                        <h3>Smartphone Xiaomi 15t 5g 12+12gb Ram + 512gb, Cinza</h3>
+                        <p class="descricao">Praticidade e ótimo custo-benefício.</p>
+                        <p class="preco">R$ 3.859,00</p>
+                        <p class="parcelas">ou 10x de R$ 385,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>iPhone 18 Pro 256GB</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$ 10.799,00</p>
+                        <p class="parcelas">ou 10x de R$ 1.079,9</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual motorola">M</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto G35 256GB Coral 5G 4GB RAM+8GB Ram Boost 5G 6,7" Câm. Dupla + Selfie 16MP</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$  1.110,00</p>
+                        <p class="parcelas">ou 10x de R$ 111,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>Apple iPhone 16e 128GB Branco 6,1" 48MP iOS 5G</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$  3.666,00</p>
+                        <p class="parcelas">ou 10x de R$ 366,60</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Celular Samsung Galaxy A57 256GB 5G 8GB RAM Azul Escuro 6,7" Câm Tripla + Selfie 12MP</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 2.665,56</p>
+                        <p class="parcelas">ou 10x de R$ 266,55</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- XIAOMI -->
+                <article class="produto"
+                    data-marca="xiaomi"
+                    data-nome="Xiaomi Redmi Note"
+                    data-preco="1699">
+
+                    <div class="imagem-produto">
+                        <span class="selo oferta">Oferta</span>
+                        <div class="celular-visual xiaomi">mi</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Xiaomi</span>
+                        <h3>Smartphone Celular Xiaomi 15T 512GB, 12GB RAM Tela 6,67 polegadas AMOLED 144 Hz, Câmera 50 MP ,Dual SIM, Bateria 5000 mAh, 5G, Preto</h3>
+                        <p class="descricao">Praticidade e ótimo custo-benefício.</p>
+                        <p class="preco">R$ 4.444,99</p>
+                        <p class="parcelas">ou 10x de R$ 444,49</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>iPhone 13 Dual SIM 128 GB azul</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$ 2.250</p>
+                        <p class="parcelas">ou 10x de R$ 225,60</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Smartphone Samsung Galaxy S24 Ultra 6,8" Galaxy AI 256GB Titânio Cinza 5G 12GB RAM Câm. Quádrupla 200MP + Selfie 12MP Bateria 5000mAh Dual Chip</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 5.998,89</p>
+                        <p class="parcelas">ou 10x de R$ 599,889</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- XIAOMI -->
+                <article class="produto"
+                    data-marca="xiaomi"
+                    data-nome="Xiaomi Redmi Note"
+                    data-preco="1699">
+
+                    <div class="imagem-produto">
+                        <span class="selo oferta">Oferta</span>
+                        <div class="celular-visual xiaomi">mi</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Xiaomi</span>
+                        <h3>Xiaomi 15t 5g 512 Gb 5g Dual Sim 12 Gb Ram 50mpx 4k ouro rosa dourado</h3>
+                        <p class="descricao">Praticidade e ótimo custo-benefício.</p>
+                        <p class="preco">R$ 4.549,00</p>
+                        <p class="parcelas">ou 10x de R$ 454,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Celular Samsung Galaxy S25 Fe Jetblack 256gb</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 3.956,00</p>
+                        <p class="parcelas">ou 10x de R$ 395,60</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- XIAOMI -->
+                <article class="produto"
+                    data-marca="xiaomi"
+                    data-nome="Xiaomi Redmi Note"
+                    data-preco="1699">
+
+                    <div class="imagem-produto">
+                        <span class="selo oferta">Oferta</span>
+                        <div class="celular-visual xiaomi">mi</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Xiaomi</span>
+                        <h3>Smartphone Xiaomi 15T Global 256GB 12GB RAM Dual SIM Tela 6.83</h3>
+                        <p class="descricao">Praticidade e ótimo custo-benefício.</p>
+                        <p class="preco">R$ 5.499,00</p>
+                        <p class="parcelas">ou 10x de R$ 549,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>Apple iPhone 17 256GB Preto 6,3" 48MP iOS 5G</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$ 6.221,11</p>
+                        <p class="parcelas">ou 10x de R$ 622,111</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- HUAWEI -->
+                <article class="produto"
+                    data-marca="huawei"
+                    data-nome="Huawei Nova"
+                    data-preco="1899">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual huawei">H</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Huawei</span>
+                        <h3>Smartphone Huawei Ultimate Design Mate XT 1TB 16GB RAM Vermelho 6,4" Câm Tripla + Selfie 8MP</h3>
+                        <p class="descricao">Visual moderno e recursos inteligentes.</p>
+                        <p class="preco">R$ 32.999,00</p>
+                        <p class="parcelas">ou 10x de R$ 3.299,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- XIAOMI -->
+                <article class="produto"
+                    data-marca="xiaomi"
+                    data-nome="Xiaomi Redmi Note"
+                    data-preco="1699">
+
+                    <div class="imagem-produto">
+                        <span class="selo oferta">Oferta</span>
+                        <div class="celular-visual xiaomi">mi</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Xiaomi</span>
+                        <h3>Smartphone Celular Xiaomi Redmi Note 15 256GB 8GB mais 8GB Lançamento 2026 Câmera 108MP 20MP AMOLED 120Hz FHD Plus Design Premium Água e Poeira</h3>
+                        <p class="descricao">Praticidade e ótimo custo-benefício.</p>
+                        <p class="preco">R$ 1.699,99</p>
+                        <p class="parcelas">ou 10x de R$ 169,99</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Samsung Galaxy S25 5G, 256GB, 12GB, Câmera Tripla</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 4.332,22</p>
+                        <p class="parcelas">ou 10x de R$ 433,222</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- HUAWEI -->
+                <article class="produto"
+                    data-marca="huawei"
+                    data-nome="Huawei Nova"
+                    data-preco="1899">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual huawei">H</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Huawei</span>
+                        <h3>Smartphone HUAWEI Pura 80 Pro 12GB+512GB Câmera Ultra-iluminação de 1 Polegada Câmera Teleobjetiva Macro Ultra-iluminação Cancelamento de Ruído por IA 5.17 Ah Dual SuperCharge Celula</h3>
+                        <p class="descricao">Visual moderno e recursos inteligentes.</p>
+                        <p class="preco">R$ 4.259,00</p>
+                        <p class="parcelas">ou 10x de R$ 425,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- APPLE -->
+                <article class="produto"
+                    data-marca="apple"
+                    data-nome="iPhone 15"
+                    data-preco="3999">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual apple">●</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Apple</span>
+                        <h3>Apple iPhone 14 256GB Meia-noite 6,1” 12M</h3>
+                        <p class="descricao">Tecnologia e câmeras de alta qualidade.</p>
+                        <p class="preco">R$  5.899,00</p>
+                        <p class="parcelas">ou 10x de R$  589,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Smartphone Samsung Galaxy S25 FE 5G 128GB 8GB RAM Tela 6,7" AMOLED 120Hz Câmera Tripla 50MP</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 3.299,00</p>
+                        <p class="parcelas">ou 10x de R$ 433,222</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual motorola">M</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto G77 5G 256GB 24GB (8GB RAM + 16GB RAM Boost) Câmera 108MP Ultra-Pixel Tela 1.5K Extreme Amoled 120Hz Ultrarresistente</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$  1.899,00</p>
+                        <p class="parcelas">ou 10x de R$ 189,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Samsung Galaxy A57 256GB 5G 8GB RAM Azul Escuro 6,7" Câm Tripla + Selfie 12MP</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 2.399,00</p>
+                        <p class="parcelas">ou 10x de R$ 239,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Smartphone Samsung Galaxy S23 128GB Violeta 5G 8GB RAM 6,1” Câm Tripla + Selfie 12M</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$ 2.879,10</p>
+                        <p class="parcelas">ou 10x de R$ 287,91</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- HUAWEI -->
+                <article class="produto"
+                    data-marca="huawei"
+                    data-nome="Huawei Nova"
+                    data-preco="1899">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual huawei">H</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Huawei</span>
+                        <h3>Smartphone HUAWEI Nova 15 Max 8GB+256GB Super Bateria de 8.500 mAh</h3>
+                        <p class="descricao">Visual moderno e recursos inteligentes.</p>
+                        <p class="preco">R$ 1.776,00</p>
+                        <p class="parcelas">ou 10x de R$ 177,60</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- SAMSUNG -->
+                <article class="produto"
+                    data-marca="samsung"
+                    data-nome="Samsung Galaxy A55"
+                    data-preco="2299">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual samsung">S</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Samsung</span>
+                        <h3>Smartphone Samsung Galaxy S26 FE 128GB 5G 8GB RAM Grafite 6,7" Câm. Tripla + Selfie 12MP</h3>
+                        <p class="descricao">Tela de qualidade e ótimo desempenho.</p>
+                        <p class="preco">R$  3.999,00</p>
+                        <p class="parcelas">ou 10x de R$ 399,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <!-- MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Motorola Edge 50"
+                    data-preco="2199">
+
+                    <div class="imagem-produto">
+                     <img
+                      src="C:\Users\ELOYSARAQUELDOSSANTO\Downloads\desenvolvimento html trabalho\imgs\Smartphone Motorola Moto G67 5G 256GB 12GB.webp"
+                     alt="Samsung Galaxy S24"
+                     class="foto-celular"
+    >
+                     </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto g47 128GB 5G 12GB (4GB RAM + 8GB RAM Boost) Azul Náutico 6,7" Câm. Dupla Selfie 32MP</h3>
+                        <p class="descricao">Design elegante e ótimo desempenho.</p>
+                        <p class="preco">R$  1.199,00</p>
+                        <p class="parcelas">ou 10x de R$ 119,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+
+                <!-- OUTRO MOTOROLA -->
+                <article class="produto"
+                    data-marca="motorola"
+                    data-nome="Moto G85"
+                    data-preco="1499">
+
+                    <div class="imagem-produto">
+                        <div class="celular-visual motorola">M</div>
+                    </div>
+
+                    <div class="informacoes">
+                        <span class="marca">Motorola</span>
+                        <h3>Smartphone Motorola Moto g86 512GB 5G 12GB+12GB RAM Boost Inteligente Lilás 6,7" Câm. Dupla + Selfie 32MP</h3>
+                        <p class="descricao">Um smartphone para o dia a dia.</p>
+                        <p class="preco">R$ 2.299,00 </p>
+                        <p class="parcelas">ou 10x de R$ 229,90</p>
+                        <button class="btn-comprar" type="button">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="semResultados" hidden>
+                Nenhum celular encontrado. Tente outra marca ou pesquisa.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <a href="index.html" class="logo">
+            Tech<span>Store</span>
+        </a>
+        <p>© 2026 TechStore. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- FUNCIONALIDADES -->
+    <script>
+        const abas = document.querySelectorAll(".aba");
+        const produtos = [...document.querySelectorAll(".produto")];
+        const busca = document.querySelector("#busca");
+        const formBusca = document.querySelector("#formBusca");
+        const ordenacao = document.querySelector("#ordenacao");
+        const quantidade = document.querySelector("#quantidade");
+        const semResultados = document.querySelector("#semResultados");
+        const grade = document.querySelector("#gradeProdutos");
+
+        let marcaSelecionada = "todas";
+
+        function atualizarProdutos() {
+            const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
+
+            let encontrados = produtos.filter(produto => {
+                const marca = produto.dataset.marca;
+                const nome = produto.dataset.nome.toLocaleLowerCase("pt-BR");
+                const texto = produto.innerText.toLocaleLowerCase("pt-BR");
+
+                const combinaMarca =
+                    marcaSelecionada === "todas" ||
+                    marca === marcaSelecionada;
+
+                const combinaBusca =
+                    nome.includes(termo) ||
+                    texto.includes(termo);
+
+                return combinaMarca && combinaBusca;
+            });
+
+            if (ordenacao.value === "menor") {
+                encontrados.sort((a, b) =>
+                    Number(a.dataset.preco) - Number(b.dataset.preco)
+                );
+            } else if (ordenacao.value === "maior") {
+                encontrados.sort((a, b) =>
+                    Number(b.dataset.preco) - Number(a.dataset.preco)
+                );
+            } else if (ordenacao.value === "nome") {
+                encontrados.sort((a, b) =>
+                    a.dataset.nome.localeCompare(b.dataset.nome, "pt-BR")
+                );
+            }
+
+            produtos.forEach(produto => produto.hidden = true);
+
+            encontrados.forEach(produto => {
+                produto.hidden = false;
+                grade.appendChild(produto);
+            });
+
+            quantidade.textContent =
+                encontrados.length +
+                (encontrados.length === 1
+                    ? " celular encontrado"
+                    : " celulares encontrados");
+
+            semResultados.hidden = encontrados.length !== 0;
+        }
+
+        abas.forEach(aba => {
+            aba.addEventListener("click", () => {
+                marcaSelecionada = aba.dataset.marca;
+
+                abas.forEach(item => item.classList.remove("ativa"));
+                aba.classList.add("ativa");
+
+                atualizarProdutos();
+            });
+        });
+
+        formBusca.addEventListener("submit", evento => {
+            evento.preventDefault();
+            atualizarProdutos();
+        });
+
+        busca.addEventListener("input", atualizarProdutos);
+        ordenacao.addEventListener("change", atualizarProdutos);
+
+        // Demonstração visual do contador do carrinho
+        let totalCarrinho = 0;
+        const contador = document.querySelector("#contador");
+
+        document.querySelectorAll(".btn-comprar").forEach(botao => {
+            botao.addEventListener("click", () => {
+                totalCarrinho++;
+                contador.textContent = totalCarrinho;
+
+                botao.textContent = "Adicionado ✓";
+
+                setTimeout(() => {
+                    botao.textContent = "Adicionar ao carrinho";
+                }, 1200);
+            });
+        });
+
+        atualizarProdutos();
+    </script>
+
+</body>
+</html>
