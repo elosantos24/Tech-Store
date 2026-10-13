@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Store - Minha Conta</title>
+  
+  
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="minha_conta.css">
+</head>
+<body>
+
+  
+  <header class="header">
+    <div class="logo">
+      <a href="home.html">Tech <span>Store</span></a>
+    </div>
+    <nav class="navbar">
+      <a href="home.html">Início</a>
+      <a href="Loja.html">Produtos</a>
+      <a href="promocoes.html">Promoções</a>
+      <a href="sobre_nos.html">Sobre Nós</a>
+      <a href="carrinho.html">Carrinho</a>
+      <a href="minha_conta.html" class="active">Minha Conta</a>
+    </nav>
+  </header>
+
+  <main class="account-container">
+    
+    
+    <section id="auth-section" class="account-card">
+      <div class="auth-tabs">
+        <button id="tab-login" class="tab-btn active" onclick="switchTab('login')">Entrar</button>
+        <button id="tab-register" class="tab-btn" onclick="switchTab('register')">Cadastrar</button>
+      </div>
+
+      
+      <form id="form-login" class="auth-form active-form" onsubmit="handleLogin(event)">
+        <h2>Acesse sua conta</h2>
+        <div class="input-group">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" placeholder="seu@email.com" required>
+        </div>
+        <div class="input-group">
+          <label for="login-password">Senha</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+
+   
+      <form id="form-register" class="auth-form" onsubmit="handleRegister(event)">
+        <h2>Crie uma conta</h2>
+        <div class="input-group">
+          <label for="reg-name">Nome Completo</label>
+          <input type="text" id="reg-name" placeholder="Seu nome" required>
+        </div>
+        <div class="input-group">
+          <label for="reg-email">E-mail</label>
+          <input type="email" id="reg-email" placeholder="seu@email.com" required>
+        </div>
+        <div class="input-group">
+          <label for="reg-password">Senha</label>
+          <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+        </div>
+        <button type="submit" class="btn-primary">Criar Conta</button>
+      </form>
+    </section>
+
+   
+    <section id="profile-section" class="account-card hidden">
+      <div class="profile-header">
+        <div>
+          <h2 id="user-display-name">Nome do Usuário</h2>
+          <p id="user-display-email" class="user-email">usuario@email.com</p>
+        </div>
+        <button class="btn-logout" onclick="handleLogout()">Sair da Conta</button>
+      </div>
+
+      <hr class="divider">
+
+      <div class="orders-section">
+        <h3>Histórico de Pedidos</h3>
+        <div id="orders-list" class="orders-list">
+          <!-- Os pedidos do usuário serão carregados aqui via JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="home.js"></script>
+  <script src="minha_conta.js"></script>
+</body>
+</html>
