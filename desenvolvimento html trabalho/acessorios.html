@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Acessórios</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="logo">Tech<span>Store</span></div>
+
+        <div class="search">
+            <input type="text" id="searchInput"
+                placeholder="O que você está procurando?">
+            <button id="searchButton">🔍</button>
+        </div>
+
+        <div class="header-actions">
+            <a href="minha_conta.html">👤 Minha conta</a>
+            <a href="carrinho.html" class="cart">
+                🛒 Carrinho
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="sobre_nos.html">Sobre nós</a>
+        <a href="celulares.html">Celulares</a>
+        <a href="computadores.html">Computadores</a>
+        <a href="acessorios.html">Acessórios</a>
+        <a href="games.html">Games</a>
+        <a href="promocoes.html">Promoções</a>
+    </nav>
+
+    <!-- PRODUTOS -->
+    <section class="section">
+        <h2>Acessórios de Tecnologia</h2>
+        <p>Complete seus equipamentos com acessórios para o dia a dia.</p>
+
+        <div class="products">
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="imgs/home_imgs/headphone.png"
+                         width="300" height="200"
+                         alt="Fone de ouvido Bluetooth">
+                </div>
+
+                <div class="product-info">
+                    <p class="category-name">Áudio</p>
+                    <h3>Fone de Ouvido Bluetooth JBL</h3>
+                    <p class="description">Bluetooth • Sem fio</p>
+                    <p class="price">R$ 399,90</p>
+                    <button class="buy-button"
+                            data-product="Fone de Ouvido Bluetooth JBL">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="imgs/home_imgs/ccontrole.png"
+                         width="300" height="200"
+                         alt="Controle sem fio">
+                </div>
+
+                <div class="product-info">
+                    <p class="category-name">Acessórios</p>
+                    <h3>Controle Sem Fio</h3>
+                    <p class="description">Conexão sem fio</p>
+                    <p class="price">R$ 299,90</p>
+                    <button class="buy-button"
+                            data-product="Controle Sem Fio">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="imgs/home_imgs/notebook.png"
+                         width="300" height="200"
+                         alt="Acessório para computador">
+                </div>
+
+                <div class="product-info">
+                    <p class="category-name">Informática</p>
+                    <h3>Acessórios para Computador</h3>
+                    <p class="description">Ideal para estudos e trabalho</p>
+                    <p class="price">R$ 149,90</p>
+                    <button class="buy-button"
+                            data-product="Acessórios para Computador">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>TechStore</h3>
+                <p>Tecnologia para facilitar o seu dia a dia.</p>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <p>Segunda a sexta<br>08:00 às 18:00</p>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <p>contato@techstore.com</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+            © 2026 TechStore. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="home.js"></script>
+
+</body>
+</html>
