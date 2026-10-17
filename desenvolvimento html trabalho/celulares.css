@@ -135,9 +135,10 @@ button {
 }
 
 .menu a:hover,
-.menu a.ativo {
-    color: #a5a0ff;
+.menu a.active {
+    color: #a5b4fc;
 }
+
 
 /* =========================
    BANNER

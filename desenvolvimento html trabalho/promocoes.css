@@ -131,6 +131,29 @@ body {
     transform: scale(1.03);
 }
 
+.menu {
+    background-color: #111827;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #a5b4fc;
+}
 
 /* =========================
    PRODUTOS
